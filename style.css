@@ -7,9 +7,6 @@
   html,
   body {
     min-height: 100%;
-  }
-  
-  body {
     font-family: "Century Gothic", Arial, sans-serif;
     background: #f2f2f2;
     color: #111;
@@ -136,27 +133,89 @@
     margin-top: 25px;
   }
   
-  body.standard,
-  body.standard #wrapper {
+body.standard,
+body.standard #wrapper {
     background: #f2f2f2;
-  }
-  
-  body.blue,
-  body.blue #wrapper {
+}
+
+body.blue,
+body.blue #wrapper {
     background: #dbeeff;
-  }
-  
-  body.red,
-  body.red #wrapper {
+}
+
+body.red,
+body.red #wrapper {
     background: #ffe0e0;
-  }
-  
-  body.green,
-  body.green #wrapper {
+}
+
+body.green,
+body.green #wrapper {
     background: #e0ffe0;
+}
+
+#images {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+#images figure {
+    background: white;
+    border: 1px solid #dcdcdc;
+    text-align: center;
+}
+
+#images img {
+    width: 180px;
+    max-width: 90%;
+    display: block;
+    margin: 15px auto;
+}
+
+#images figcaption {
+    background: black;
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#bootstrap {
+    width: 90%;
+    margin: 0 auto;
   }
   
-  @media (min-width: 768px) and (max-width: 999px) {
+  .bootstrap-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 350px;
+    gap: 20px;
+    align-items: start;
+  }
+  
+  .bootstrap-top form {
+    width: 100%;
+  }
+  
+  .bootstrap-top .card {
+    width: 100%;
+  }
+  
+  .bootstrap-top .card img {
+    padding: 20px;
+  }
+  
+  .bootstrap-carousel {
+    margin-top: 40px;
+  }
+  
+  .bootstrap-carousel img {
+    max-height: 600px;
+    object-fit: contain;
+  }
+
+
+@media (min-width: 768px) and (max-width: 999px) {
     #wrapper {
       display: grid;
       grid-template-columns: 170px 1fr;
@@ -191,6 +250,35 @@
       margin: 0;
       text-align: center;
     }
+    #images {
+        grid-column: 2;
+        grid-row: 1 / 5;
+      
+        width: 92%;
+        padding: 25px 0;
+      
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+#bootstrap {
+  grid-column: 2;
+  grid-row: 1 / 5;
+
+  width: 92%;
+  padding: 25px 0;
+}
+
+.bootstrap-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.bootstrap-top .card {
+  grid-column: 1;
+}
   
     nav {
       grid-column: 1;
@@ -262,6 +350,33 @@
       text-align: center;
       background: white;
     }
+    #images {
+        padding: 10px;
+        order: 3;
+        width: 95%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      
+      #images figure {
+        background: white;
+        border: 1px solid #dcdcdc;
+        text-align: center;
+      }
+      
+      #images img {
+        width: 92%;
+        display: block;
+        margin: 10px auto;
+      }
+      
+      #images figcaption {
+        background: black;
+        color: white;
+        padding: 8px;
+      }
   
     header img {
       width: 120px;
