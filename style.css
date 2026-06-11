@@ -1,134 +1,342 @@
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: Arial, sans-serif;
-}
-
-#wrapper {
-max-width: 1200px;
-margin: auto;
-}
-
-nav {
-background: #333;
-}
-
-nav ul {
-list-style: none;
-display: flex;
-align-items: center;
-}
-
-nav li {
-padding: 15px;
-}
-
-nav a {
-color: white;
-text-decoration: none;
-}
-
-#style-picker {
-padding: 5px;
-}
-
-header article {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 20px;
-}
-
-header img {
-width: 100px;
-}
-
-.content {
-display: flex;
-align-items: center;
-gap: 30px;
-padding: 30px 20px;
-border-top: 8px solid #ccc;
-}
-
-.content:nth-child(even) {
-flex-direction: row-reverse;
-}
-
-.content img {
-width: 180px;
-height: 180px;
-border-radius: 50%;
-}
-
-.content section {
-flex: 1;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: white;}
-
-body.standard {
-background: white;
-}
-
-body.blue {
-background: #dbeeff;
-}
-
-body.red {
-background: #ffe0e0;
-}
-
-body.green {
-background: #e0ffe0;
-}
-
-#menu-btn {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    min-height: 100%;
+  }
+  
+  body {
+    font-family: "Century Gothic", Arial, sans-serif;
+    background: #f2f2f2;
+    color: #111;
+  }
+  
+  #wrapper {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+  
+  nav {
+    background: white;
+  }
+  
+  #menu-btn {
     display: none;
   }
   
-@media (max-width: 767px) {
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    flex: 1;
+    text-align: center;
+    border-right: 5px solid lime;
+  }
+  
+  nav li:last-child {
+    border-right: none;
+  }
+  
+  nav a {
+    display: block;
+    padding: 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #style-picker {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  header article {
+    background: white;
+    width: 90%;
+    margin: 35px auto;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+  }
+  
+  header img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  
+  header h1 {
+    margin-left: 20px;
+    font-size: 24px;
+  }
+  
+  header aside {
+    margin-left: auto;
+    text-align: right;
+  }
+  
+  header aside h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  #index {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 0;
+    border-top: 7px solid #999;
+  }
+  
+  .content:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .content img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .content section {
+    flex: 1;
+  }
+  
+  .content h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+  
+  .content p {
+    line-height: 1.4;
+  }
+  
+  footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 25px;
+  }
+  
+  body.standard,
+  body.standard #wrapper {
+    background: #f2f2f2;
+  }
+  
+  body.blue,
+  body.blue #wrapper {
+    background: #dbeeff;
+  }
+  
+  body.red,
+  body.red #wrapper {
+    background: #ffe0e0;
+  }
+  
+  body.green,
+  body.green #wrapper {
+    background: #e0ffe0;
+  }
+  
+  @media (min-width: 768px) and (max-width: 999px) {
+    #wrapper {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      max-width: 999px;
+      min-height: 100vh;
+    }
+  
+    header {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  
+    header article {
+      width: 100%;
+      margin: 0;
+      padding: 20px 10px;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    header img {
+      width: 110px;
+      height: 110px;
+    }
+  
+    header h1 {
+      margin: 15px 0 10px;
+    }
+  
+    header aside {
+      margin: 0;
+      text-align: center;
+    }
+  
+    nav {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  
+    nav ul {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    nav li {
+      border-right: none;
+      border-bottom: 5px solid lime;
+    }
+  
+    nav a,
+    #style-picker {
+      padding: 18px;
+    }
+  
+    #index {
+      grid-column: 2;
+      grid-row: 1 / 5;
+      width: 92%;
+      padding: 25px 0;
+    }
+  
+    .content {
+      gap: 20px;
+      padding: 25px 0;
+    }
+  
+    .content img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    footer {
+      grid-column: 1;
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+
+    #wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-height: 100vh;
+    }
+  
+    header {
+      order: 1;
+    }
+  
+    header article {
+      width: 100%;
+      margin: 0;
+      padding: 20px;
+      flex-direction: column;
+      text-align: center;
+      background: white;
+    }
+  
+    header img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    header h1 {
+      margin: 15px 0 10px;
+    }
+  
+    header aside {
+      margin: 0;
+      text-align: center;
+    }
+  
+    nav {
+      order: 2;
+    }
   
     #menu-btn {
       display: block;
-      background: #333;
+      background: black;
       color: white;
+      text-align: center;
       padding: 15px;
       cursor: pointer;
+      font-weight: bold;
     }
   
     nav ul {
       display: none;
       flex-direction: column;
+      width: 100%;
     }
   
     nav ul.show {
       display: flex;
     }
   
-    .content {
-      flex-direction: column !important;
-      text-align: center;
+    nav li {
+      border-right: none;
+      border-bottom: 3px solid lime;
     }
   
-    header article {
+    nav a {
+      padding: 15px;
+    }
+  
+    #style-picker {
+      padding: 15px;
+    }
+  
+    #index {
+      order: 3;
+      width: 95%;
+      margin: 0 auto;
+      padding-top: 20px;
+    }
+  
+    .content,
+    .content:nth-child(even) {
       flex-direction: column;
       text-align: center;
+      gap: 15px;
     }
-  }
-
-@media (min-width: 768px) and (max-width: 999px) {
-
+  
     .content img {
-      width: 140px;
-      height: 140px;
+      width: 150px;
+      height: 150px;
+    }
+  
+    footer {
+      order: 4;
+      width: 100%;
+      margin-top: 20px;
+      padding: 20px;
     }
   }
