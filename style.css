@@ -80,7 +80,7 @@
   
   header aside {
     margin-left: auto;
-    text-align: right;
+    text-align: center;
   }
   
   header aside h2 {
@@ -348,52 +348,16 @@ body.green #wrapper {
       padding: 20px;
       flex-direction: column;
       text-align: center;
-      background: white;
     }
-    #images {
-        padding: 10px;
-        order: 3;
-        width: 95%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-      }
-      
-      #images figure {
-        background: white;
-        border: 1px solid #dcdcdc;
-        text-align: center;
-      }
-      
-      #images img {
-        width: 92%;
-        display: block;
-        margin: 10px auto;
-      }
-      
-      #images figcaption {
-        background: black;
-        color: white;
-        padding: 8px;
-      }
   
     header img {
       width: 120px;
       height: 120px;
     }
   
-    header h1 {
-      margin: 15px 0 10px;
-    }
-  
-    header aside {
-      margin: 0;
-      text-align: center;
-    }
-  
     nav {
       order: 2;
+      width: 100%;
     }
   
     #menu-btn {
@@ -402,8 +366,8 @@ body.green #wrapper {
       color: white;
       text-align: center;
       padding: 15px;
-      cursor: pointer;
       font-weight: bold;
+      cursor: pointer;
     }
   
     nav ul {
@@ -447,6 +411,50 @@ body.green #wrapper {
       width: 150px;
       height: 150px;
     }
+  
+    #images {
+      order: 3;
+      width: 95%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    #images img {
+      width: 92%;
+      display: block;
+      margin: 10px auto;
+    }
+  
+    #bootstrap {
+      order: 3;
+      width: 95%;
+      margin: 0 auto;
+      padding-top: 20px;
+    }
+  
+    .bootstrap-top {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .bootstrap-top .card {
+      width: 100%;
+    }
+  
+    .bootstrap-carousel img {
+      max-height: 350px;
+      object-fit: contain;
+    }
+
+      
+    header aside, h1 {
+        margin: 0;
+        text-align: center;
+      }
+
   
     footer {
       order: 4;
